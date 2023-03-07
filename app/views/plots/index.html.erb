@@ -1,0 +1,13 @@
+<h1>All Plots Index</h1>
+<br>
+<%@plots.each do |plot| %>
+  <div id = "plot_info-<%=plot.id%>">
+    <p>Plot #<%=plot.number%></p>
+    <p>Plants</p>
+    <%plot.plants.each do |plant|%>
+      <div id = "plant-<%=plant.name%>">
+        <p><%=plant.name%><%= button_to "Remove #{plant.name}", "/plots/#{plot.id}/plants/#{plant.id}", method: :delete %></p>
+      </div>
+    <%end%>
+  </div>
+<%end%>
