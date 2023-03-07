@@ -22,7 +22,6 @@ RSpec.describe "/Plots", type: :feature do
   end
   describe "As a visitor, when I visit the plots index page" do
     it " I see a list of all plot numbers" do
-      save_and_open_page
       expect(page).to have_content("Plot ##{@plot1.number}")
       expect(page).to have_content("Plot ##{@plot2.number}")
       expect(page).to have_content("Plot ##{@plot3.number}")

@@ -1,0 +1,10 @@
+<h1><%= @garden.name %>'s Show Page</h1>
+<br>
+<h3>plants that take less than 100 days to harvest</h3>
+<% @unique_plants.each do |plant| %>
+  <% if plant.days_to_harvest <= 100 %>
+    <ul>
+      <li><%= plant.name %></li>
+    </ul>
+  <% end %>
+<% end %>
