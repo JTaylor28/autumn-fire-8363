@@ -27,7 +27,7 @@ RSpec.describe Garden do
 
   describe "instance methods" do
     it "#uniq_passengers_list" do
-      expect(@garden.uniq_plants.to_a).to eq([@plant1, @plant2, @plant3])
+      expect(@garden.uniq_plants).to eq([@plant1, @plant2, @plant3])
     end
   end
 end
